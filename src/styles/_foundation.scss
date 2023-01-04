@@ -1,0 +1,21 @@
+ a {
+     color: black;
+     text-decoration: none;
+
+     &:hover {
+        text-decoration: underline spacing;
+     }
+     &:visited {
+        color: black;
+        text-decoration: none;
+     }
+
+ }
+
+ h1 {
+   font-family: $font-primary;
+   font-weight: 500;
+ }
+
+
+ 
