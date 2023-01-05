@@ -5,9 +5,9 @@ import { graphql } from "gatsby"
 import Thumbnail from '../components/Thumbnail'
 
 
-const Index = ({data}) => {
+const Commercial = ({data}) => {
   
-  const thumbnails = data.datoCmsHomepage.thumbnails;
+  const thumbnails = data.datoCmsCommercial.thumbnails;
   console.log('videos', thumbnails);
   return (
     <>
@@ -30,12 +30,11 @@ const Index = ({data}) => {
   )
 }
 
-export default Index
+export default Commercial
 
 export const query = graphql`
 query HomeQuery {
-  datoCmsHomepage {
-    homepageText
+  datoCmsCommercial {
     thumbnails {
       originalId
       videoTimestamp
