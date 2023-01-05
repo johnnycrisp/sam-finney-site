@@ -11,7 +11,6 @@ const Commercial = ({data}) => {
   console.log('videos', thumbnails);
   return (
     <>
-    <Hero />
     <Layout>
     {thumbnails.map((thumbnail)=> {
     return (
@@ -33,7 +32,7 @@ const Commercial = ({data}) => {
 export default Commercial
 
 export const query = graphql`
-query HomeQuery {
+query CommQuery {
   datoCmsCommercial {
     thumbnails {
       originalId

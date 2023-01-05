@@ -1,0 +1,80 @@
+//Layout
+
+.site__wrapper {
+    padding: 1rem;
+}
+
+//Hero 
+
+.hero__wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h1 {
+        position: absolute;
+        color: white;
+        padding-left: 1rem;
+
+    }
+
+
+        .gatsby-image-wrapper {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+    }
+
+
+
+//Nav 
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__socials ul {
+    display: flex;
+
+    li + li {
+        margin-left: 2rem;
+    }
+
+    li {
+        text-decoration: underline;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+#dropdown-button {
+    width: 20%;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+//Thumbnail 
+
+.thumbnail__wrapper {
+    p {
+        padding-bottom: .3rem;
+    }
+    h4 {
+        font-weight: bold;
+        padding-top: .3rem;
+    }
+}
+
+// Home grid
+
+.home__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}

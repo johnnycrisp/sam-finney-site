@@ -3,13 +3,13 @@ import '../styles/main.scss'
 import Footer from './Footer'
 import Nav from './Nav'
 
-const Layout = ({children}) => {
+const Layout = ({children, homepageText}) => {
   return (
-    <>
-        <Nav />
+    <div className="site__wrapper">
+        <Nav homepageText={homepageText}/>
         <main>{children}</main>
         <Footer />
-    </>
+    </div>
     
   )
 }

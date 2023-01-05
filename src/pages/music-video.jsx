@@ -5,9 +5,9 @@ import { graphql } from "gatsby"
 import Thumbnail from '../components/Thumbnail'
 
 
-const Documentary = ({data}) => {
+const Music = ({data}) => {
   
-  const thumbnails = data.datoCmsDocumentary.thumbnails;
+  const thumbnails = data.datoCmsMusicVideo.thumbnails;
   console.log('videos', thumbnails);
   return (
     <>
@@ -29,11 +29,11 @@ const Documentary = ({data}) => {
   )
 }
 
-export default Documentary
+export default Music
 
 export const query = graphql`
-query DocQuery {
-  datoCmsDocumentary {
+query MusicQuery {
+  datoCmsMusicVideo {
     thumbnails {
       originalId
       videoTimestamp
