@@ -53,10 +53,43 @@ header {
     }
 }
 
-#dropdown-button {
-    width: 20%;
-    text-align: left;
+nav {
     margin-bottom: 1rem;
+}
+
+.nav__toggle {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    // position: sticky;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 0.3rem;
+    font-size: 14px;
+    background-color: white;
+
+    button {
+        background: white;
+        border: none;
+        padding: 0;
+    }
+}
+
+.nav__menu {
+    display: none;
+}
+
+.menu__open {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    a {
+        padding: .3rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 //Thumbnail 

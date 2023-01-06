@@ -7,7 +7,7 @@ const Thumbnail = ({title, subtitle, timestamp, image, slug }) => {
     <div className="thumbnail__wrapper">
         <p>{timestamp}</p>
         <GatsbyImage alt={title} className="thumbnail" image={getImage(image)}/>
-        <Link to={`/${slug}`}><h4><strong>{title}</strong></h4><p>{subtitle}</p></Link>
+        <Link to={`/${slug}`}><h4>{title}</h4><p>{subtitle}</p></Link>
     </div>
   )
 }
