@@ -5,7 +5,7 @@ import '../styles/main.scss'
 const Hero = ({image}) => {
   return (
     <div className="hero__wrapper">
-        <div clasName="hero__image-wrapper">
+        <div className="hero__image-wrapper">
           <GatsbyImage className="hero-image" image={getImage(image)}/>
         </div>
         <h1>sam finney, cinematographer</h1>

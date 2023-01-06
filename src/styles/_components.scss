@@ -111,3 +111,16 @@ nav {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
+
+//VideoFrame 
+
+
+    .vp-center {
+        justify-content: !important flex-start;
+    }
+
+    .video__stills {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }

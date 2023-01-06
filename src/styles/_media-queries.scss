@@ -1,0 +1,16 @@
+@media screen and (min-width: 768px) {
+    .home__grid {
+        grid-template-columns: repeat(6, 1fr);
+
+    }
+
+    .thumbnail__wrapper {
+        grid-column: span 3;
+    }
+
+    .home__grid .thumbnail__wrapper:nth-child(5n), 
+    .home__grid .thumbnail__wrapper:nth-child(5n-1),
+     .home__grid .thumbnail__wrapper:nth-child(5n-2)  {
+        grid-column: span 2;
+}
+}

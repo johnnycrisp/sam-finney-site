@@ -11,11 +11,15 @@ const Video = ({data, pageContext}) => {
   return (
     <Layout>
       <div>{video.title}</div>
-      <div dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
       <VideoFrame title={video.title} url={videoId} />
-      {video.videoStills.map((still) => {
-        return (<GatsbyImage key={still.originalId} alt={`Still from ${video.title}`} className="thumbnail" image={getImage(still)}/>)
+      <div dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
+      <div className="video__stills">
+        {video.videoStills.map((still) => {
+        return (
+          <GatsbyImage  key={still.originalId} alt={`Still from ${video.title}`} className="thumbnail" image={getImage(still)}/>
+         )
       })}
+      </div>
       
     </Layout>
     
