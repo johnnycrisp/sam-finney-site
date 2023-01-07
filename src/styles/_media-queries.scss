@@ -8,9 +8,22 @@
         grid-column: span 3;
     }
 
-    .home__grid .thumbnail__wrapper:nth-child(5n), 
-    .home__grid .thumbnail__wrapper:nth-child(5n-1),
-     .home__grid .thumbnail__wrapper:nth-child(5n-2)  {
-        grid-column: span 2;
+    .home__grid .thumbnail__wrapper  {
+
+        &:nth-child(5n),
+        &:nth-child(5n-1),
+        &:nth-child(5n-2),
+        &:nth-child(10n),
+        &:nth-child(10n-1),
+        &:nth-child(10n-2) {
+            grid-column: span 2;
+        }
+        
+    }
+
+    .nav__toggle, .menu__open {
+        width: 40%;
+    }
+
 }
-}
+

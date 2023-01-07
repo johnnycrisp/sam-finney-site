@@ -1,17 +1,21 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Thumbnail from '../components/Thumbnail'
 
 
 const Documentary = ({data}) => {
+
   
   const thumbnails = data.datoCmsDocumentary.thumbnails;
-  console.log('videos', thumbnails);
+  const title = data.datoCmsDocumentary.pageTitle
+  console.log('docdata', data);
   return (
     <>
-    <Layout>
+    <Layout 
+    homepageText={data.datoCmsHomepage.homepageText}
+    title={title}
+    >
     {thumbnails.map((thumbnail)=> {
     return (
         <Thumbnail key={thumbnail.originalId}
@@ -34,6 +38,7 @@ export default Documentary
 export const query = graphql`
 query DocQuery {
   datoCmsDocumentary {
+    pageTitle
     thumbnails {
       originalId
       videoTimestamp
@@ -44,6 +49,8 @@ query DocQuery {
         gatsbyImageData(placeholder: BLURRED)
       }
     }
+  } datoCmsHomepage {
+    homepageText
   }
 }
 `

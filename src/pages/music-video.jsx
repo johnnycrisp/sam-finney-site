@@ -1,5 +1,4 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import { graphql } from "gatsby"
 import Thumbnail from '../components/Thumbnail'
@@ -8,10 +7,14 @@ import Thumbnail from '../components/Thumbnail'
 const Music = ({data}) => {
   
   const thumbnails = data.datoCmsMusicVideo.thumbnails;
+  const title = data.datoCmsMusicVideo.pageTitle
   console.log('videos', thumbnails);
   return (
     <>
-    <Layout>
+    <Layout 
+    homepageText={data.datoCmsHomepage.homepageText}
+    title={title}
+    >
     {thumbnails.map((thumbnail)=> {
     return (
         <Thumbnail key={thumbnail.originalId}
@@ -34,6 +37,7 @@ export default Music
 export const query = graphql`
 query MusicQuery {
   datoCmsMusicVideo {
+    pageTitle
     thumbnails {
       originalId
       videoTimestamp
@@ -44,6 +48,9 @@ query MusicQuery {
         gatsbyImageData(placeholder: BLURRED)
       }
     }
+  }
+  datoCmsHomepage {
+    homepageText
   }
 }
 `

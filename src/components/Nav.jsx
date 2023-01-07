@@ -1,11 +1,18 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import Dropdown from 'react-bootstrap/Dropdown'
-import DropdownButton from 'react-bootstrap/DropdownButton'
+import React, { useState } from 'react'
 import '../styles/main.scss'
 import DropdownNav from './DropdownNav'
 
-const Nav = ({homepageText}) => {
+const Nav = ({homepageText, title}) => {
+
+
+  // const [isActive, setActive] = useState('Work')
+  // const handleActiveChange = (val) => {
+  //   return setActive(val);
+
+  // }
+
+
+
   return (
     <header>
         <p className="nav__text">{homepageText}</p>
@@ -16,7 +23,14 @@ const Nav = ({homepageText}) => {
                 <li>Instagram</li>
             </ul>
         </div>
-        <DropdownNav />
+        <DropdownNav 
+
+        title={title}
+
+        // handleActiveChange={handleActiveChange}
+        // isActive={isActive}
+
+         />
     </header>
   )
 }

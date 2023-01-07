@@ -1,12 +1,13 @@
-import { Link } from 'gatsby';
+import { Link, useStaticQuery } from 'gatsby';
 import React, {useState} from 'react'
 
+function DropdownNav({title}) {
 
-function DropdownNav() {
 
  const [isOpen, setOpen] = useState(false)
+ const [isActive, setActive] = useState('Work')
 
- const handleChange = (e) => {
+ const handleChange = () => {
     if(isOpen === false){
         setOpen(true);
     } else {
@@ -17,10 +18,10 @@ function DropdownNav() {
   return (
     <nav>
         <button onClick={handleChange} className="nav__toggle">
-            <span>Work</span><span>+</span>
+            <span>{title ? title : 'Work'}</span><span>+</span>
         </button>
         <div className={isOpen ? "menu__open" : "nav__menu"}>
-            <Link to="/commercial">Commercial</Link>
+            <Link onClick={()=> setActive('Commercial')} to="/commercial">Commercial</Link>
             <Link to="/documentary">Documentary</Link>
             <Link to="/music-video">Music Video</Link>
             <Link to="/archive">Archive</Link>
