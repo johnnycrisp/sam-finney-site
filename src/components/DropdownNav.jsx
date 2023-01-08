@@ -21,13 +21,12 @@ function DropdownNav({title}) {
             <span>{title ? title : 'Work'}</span><span>+</span>
         </button>
         <div className={isOpen ? "menu__open" : "nav__menu"}>
+            <Link to="/">Home</Link>
             <Link onClick={()=> setActive('Commercial')} to="/commercial">Commercial</Link>
             <Link to="/documentary">Documentary</Link>
             <Link to="/music-video">Music Video</Link>
             <Link to="/archive">Archive</Link>
             <Link to="/about">About</Link>
-            <Link to="/">Home</Link>
-
         </div>
     </nav>
   );

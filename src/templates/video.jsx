@@ -12,17 +12,25 @@ const Video = ({data, pageContext}) => {
   return (
     <Layout>
       <Seo title={video.title} />
-      <div>{video.title}</div>
-      <VideoFrame title={video.title} url={videoId} />
-      <div dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
-      <div className="video__stills">
-        {video.videoStills.map((still) => {
-        return (
-          <GatsbyImage  key={still.originalId} alt={`Still from ${video.title}`} className="thumbnail" image={getImage(still)}/>
-         )
-      })}
+      <div className="video__page-wrapper">
+        <h2 className="mobile__video-title">{video.title}</h2>
+        <div className="desktop__video-details" dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
+        <div className="video__page-content">
+          <VideoFrame className="video__page-video" title={video.title} url={videoId} />
+          <div className="mobile__video-details" dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
+        <div className="video__stills">
+            {video.videoStills.map((still) => {
+            return (
+              <GatsbyImage  key={still.originalId} alt={`Still from ${video.title}`} className="thumbnail" image={getImage(still)}/>
+            )
+          })}
+          <Link className="back-link" to="/">&larr; Back</Link>
+        </div>
+        </div>
+        
+        
       </div>
-      <Link className="back-link" to="/">&larr; Back</Link>
+      
       
     </Layout>
     

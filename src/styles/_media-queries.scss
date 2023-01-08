@@ -27,5 +27,59 @@
         gap: 1rem;
     }
 
+    .mobile__video-title {
+        display: none;
+    }
+
+    .video__page-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .video__stills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
+            .thumbnail {
+                grid-column: span 2;
+
+                &:nth-child(2n), &:nth-child(3n) {
+                grid-column: span 1;
+                }
+            }
+
+           
+        }
+
+        .vimeo__embed {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+        
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+        
+            }
+        
+        }
+    }
+
+    .desktop__video-details {
+        display: flex;
+        // position: sticky;
+        top: 20px;
+        flex-direction: column;
+        min-width: 30%;
+        gap: .5rem;
+     }
+
+     .mobile__video-details {
+        display: none;
+     }
+
 }
 

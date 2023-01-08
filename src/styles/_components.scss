@@ -125,13 +125,65 @@ nav {
 
 //VideoFrame 
 
+.vimeo__embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
 
-    .vp-center {
-        justify-content: !important flex-start;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+
+}
+
+
+//Video Page
+
+    .video__page-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h2 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        li {
+            padding-bottom: .2rem;
+        }
+    }
+
+    .desktop__video-details {
+       display: none;
+    }
+
+    .mobile__video-title {
+        order: 0;
+    }
+
+    .video__page-content {
+        display: flex;
+        order: 1;
+        flex-direction: column;
     }
 
     .video__stills {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .mobile__video-details {
+        margin-top: 1rem;
+
+        h2 {
+            margin-bottom: .7rem;
+        }
     }
