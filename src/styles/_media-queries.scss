@@ -1,28 +1,30 @@
 @media screen and (min-width: 768px) {
     .home__grid {
         grid-template-columns: repeat(6, 1fr);
-
-    }
-
-    .thumbnail__wrapper {
-        grid-column: span 3;
-    }
-
-    .home__grid .thumbnail__wrapper  {
-
-        &:nth-child(5n),
-        &:nth-child(5n-1),
-        &:nth-child(5n-2),
-        &:nth-child(10n),
-        &:nth-child(10n-1),
-        &:nth-child(10n-2) {
-            grid-column: span 2;
-        }
         
+            .thumbnail__wrapper {
+            grid-column: span 3;
+            
+            &:nth-child(5n),
+            &:nth-child(5n-1),
+            &:nth-child(5n-2),
+            &:nth-child(10n),
+            &:nth-child(10n-1),
+            &:nth-child(10n-2) {
+                grid-column: span 2;
+            }
+        }
+
     }
 
     .nav__toggle, .menu__open {
         width: 40%;
+    }
+
+    .archive__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
     }
 
 }

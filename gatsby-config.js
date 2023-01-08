@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     title: `Sam Finney`,
     description: `Portfolio website for the cinematographer, Sam Finney`,
-    author: `Johnny Crisp`,
+    author: `Sam Finney`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [{

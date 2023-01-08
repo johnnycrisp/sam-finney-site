@@ -1,7 +1,8 @@
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 import VideoFrame from '../components/VideoFrame';
 
 const Video = ({data, pageContext}) => {
@@ -10,6 +11,7 @@ const Video = ({data, pageContext}) => {
   console.log(video)
   return (
     <Layout>
+      <Seo title={video.title} />
       <div>{video.title}</div>
       <VideoFrame title={video.title} url={videoId} />
       <div dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
@@ -20,6 +22,7 @@ const Video = ({data, pageContext}) => {
          )
       })}
       </div>
+      <Link className="back-link" to="/">&larr; Back</Link>
       
     </Layout>
     

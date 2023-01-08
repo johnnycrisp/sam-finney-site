@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql, useStaticQuery } from "gatsby"
 import Thumbnail from '../components/Thumbnail'
+import Seo from '../components/Seo'
 
 
 const Documentary = ({data}) => {
@@ -16,17 +17,20 @@ const Documentary = ({data}) => {
     homepageText={data.datoCmsHomepage.homepageText}
     title={title}
     >
-    {thumbnails.map((thumbnail)=> {
+    <Seo title="Documentary" />
+    <div className="archive__grid">
+      {thumbnails.map((thumbnail)=> {
     return (
         <Thumbnail key={thumbnail.originalId}
         title={thumbnail.title}
         subtitle={thumbnail.subtitle}
         timestamp={thumbnail.videoTimestamp}
         image={thumbnail.thumbnailImage}
-        slug={thumbnail.slug}
+        slug={thumbnail.linkToVideo.slug}
          />
     )
   })}
+    </div>
     </Layout>
     </>
     
@@ -44,7 +48,9 @@ query DocQuery {
       videoTimestamp
       title
       subtitle
-      slug
+      linkToVideo {
+        slug
+      }
       thumbnailImage {
         gatsbyImageData(placeholder: BLURRED)
       }

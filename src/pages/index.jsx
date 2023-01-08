@@ -29,7 +29,7 @@ const Index = ({data}) => {
             subtitle={thumbnail.subtitle}
             timestamp={thumbnail.videoTimestamp}
             image={thumbnail.thumbnailImage}
-            slug={thumbnail.slug}
+            slug={thumbnail.linkToVideo.slug}
             />
         )
       })}
@@ -51,11 +51,13 @@ query HomeQuery {
       gatsbyImageData(placeholder: BLURRED)
     }
     thumbnails {
+      linkToVideo {
+        slug
+      }
       originalId
       videoTimestamp
       title
       subtitle
-      slug
       thumbnailImage {
         gatsbyImageData(placeholder: BLURRED)
       }
