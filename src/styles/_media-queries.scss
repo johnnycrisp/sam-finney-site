@@ -62,7 +62,6 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-        
             }
         
         }
@@ -86,6 +85,65 @@
      .mobile__video-details {
         display: none;
      }
+
+     
+// .hero__wrapper {
+//     height: 100vh;
+//     overflow: hidden;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     position: relative;
+
+
+//     .hero__image-wrapper {
+//         padding: 56.25%;
+//         width: 600px;
+//         position: relative;
+//         overflow: hidden;
+//         height: 0;
+        
+//         iframe {
+//         height: 100%;
+//         width: 100%;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         }
+//     }
+// }
+
+// other version 
+
+
+// .hero__wrapper {
+//     height: 100vh;
+//     overflow: hidden;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     // align-items: center;
+//     justify-content: center;
+
+
+//     .hero__image-wrapper {
+//         padding: 56.25%;
+//         position: relative;
+//         overflow: hidden;
+//         height: 0;
+        
+//         iframe {
+//         height: 100%;
+//         width: 100%;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+    
+//     }
+        
+//     }
 
 }
 
