@@ -16,12 +16,12 @@ const Hero = ({image}) => {
   }
 `)
 
-  const videoId = heroVid.datoCmsHomepage.heroVimeoLink.url.slice(18)
+  // const videoId = heroVid.datoCmsHomepage.heroVimeoLink.url.slice(18)
 
   return (
     <div className="hero__wrapper">
         <div className="hero__image-wrapper">
-        <iframe src="https://player.vimeo.com/video/737926902?h=f5e830db58&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/737926902?h=f5e830db58&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;" frameborder="0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           {/* <HeroVideo url={videoId} title={'Sam'} />
            */}
           {/* <GatsbyImage className="hero-image" image={getImage(image)}/> */}

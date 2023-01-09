@@ -11,6 +11,8 @@ const VideoFrame = ({ url, title }) => (
       position="absolute"
       top="0"
       left="0"
+      mozallowfullscreen="true"
+      allowFullScreen
       width="100%"
       height="100%"
     />
