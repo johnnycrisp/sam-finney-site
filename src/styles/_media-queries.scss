@@ -68,10 +68,16 @@
         }
     }
 
+    .details__wrapper {
+        min-width: 30%;
+        height: 100%;
+        position: relative;
+    }
+
     .desktop__video-details {
         display: flex;
-        // position: sticky;
-        top: 20px;
+        position: fixed;
+        top: 120px;
         flex-direction: column;
         min-width: 30%;
         gap: .5rem;

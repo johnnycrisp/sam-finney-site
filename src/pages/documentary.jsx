@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Thumbnail from '../components/Thumbnail'
 import Seo from '../components/Seo'
 
@@ -8,26 +8,26 @@ import Seo from '../components/Seo'
 const Documentary = ({data}) => {
 
   
-  const thumbnails = data.datoCmsDocumentary.thumbnails;
+  const thumbnails = data.datoCmsDocumentary.videoThumbnails
   const title = data.datoCmsDocumentary.pageTitle
   console.log('docdata', data);
   return (
     <>
     <Layout 
-    homepageText={data.datoCmsHomepage.homepageText}
     title={title}
     >
     <Seo title="Documentary" />
     <div className="archive__grid">
       {thumbnails.map((thumbnail)=> {
+    const vid = thumbnail.linkToVideo
     return (
-        <Thumbnail key={thumbnail.originalId}
-        title={thumbnail.title}
-        subtitle={thumbnail.subtitle}
-        timestamp={thumbnail.videoTimestamp}
-        image={thumbnail.thumbnailImage}
+        <Thumbnail key={vid.originalId}
+        title={vid.title}
+        subtitle={vid.subtitle}
+        timestamp={vid.videoTimestamp}
+        image={vid.thumbnailImage}
         slug={thumbnail.linkToVideo.slug}
-         />
+        />
     )
   })}
     </div>
@@ -43,20 +43,18 @@ export const query = graphql`
 query DocQuery {
   datoCmsDocumentary {
     pageTitle
-    thumbnails {
-      originalId
-      videoTimestamp
-      title
-      subtitle
+    videoThumbnails {
       linkToVideo {
-        slug
-      }
-      thumbnailImage {
-        gatsbyImageData(placeholder: BLURRED)
+          slug
+          originalId
+          title
+          subtitle
+          videoTimestamp
+          thumbnailImage {
+            gatsbyImageData(placeholder: BLURRED)
+          }
       }
     }
-  } datoCmsHomepage {
-    homepageText
   }
 }
 `

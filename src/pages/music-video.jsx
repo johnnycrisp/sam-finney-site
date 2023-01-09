@@ -7,26 +7,26 @@ import Seo from '../components/Seo'
 
 const Music = ({data}) => {
   
-  const thumbnails = data.datoCmsMusicVideo.thumbnails;
+  const thumbnails = data.datoCmsMusicVideo.videoThumbnails
   const title = data.datoCmsMusicVideo.pageTitle
   console.log('videos', thumbnails);
   return (
     <>
     <Layout 
-    homepageText={data.datoCmsHomepage.homepageText}
     title={title}
     >
     <Seo title="Music Video" />
     <div className="archive__grid">
       {thumbnails.map((thumbnail)=> {
+    const vid = thumbnail.linkToVideo
     return (
-        <Thumbnail key={thumbnail.originalId}
-        title={thumbnail.title}
-        subtitle={thumbnail.subtitle}
-        timestamp={thumbnail.videoTimestamp}
-        image={thumbnail.thumbnailImage}
+        <Thumbnail key={vid.originalId}
+        title={vid.title}
+        subtitle={vid.subtitle}
+        timestamp={vid.videoTimestamp}
+        image={vid.thumbnailImage}
         slug={thumbnail.linkToVideo.slug}
-         />
+        />
     )
   })}
     </div>
@@ -42,21 +42,18 @@ export const query = graphql`
 query MusicQuery {
   datoCmsMusicVideo {
     pageTitle
-    thumbnails {
-      originalId
-      videoTimestamp
-      title
-      subtitle
+    videoThumbnails {
       linkToVideo {
-        slug
-      }
-      thumbnailImage {
-        gatsbyImageData(placeholder: BLURRED)
+          slug
+          originalId
+          title
+          subtitle
+          videoTimestamp
+          thumbnailImage {
+            gatsbyImageData(placeholder: BLURRED)
+          }
       }
     }
-  }
-  datoCmsHomepage {
-    homepageText
   }
 }
 `

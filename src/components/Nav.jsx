@@ -1,21 +1,26 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import React, { useState } from 'react'
 import '../styles/main.scss'
 import DropdownNav from './DropdownNav'
 
-const Nav = ({homepageText, title}) => {
+const Nav = ({title}) => {
+
+  const header = useStaticQuery(graphql`
+    query HeaderQuery {
+      datoCmsHomepage {
+        homepageText
+      }
+    }
+  `)
 
 
-  // const [isActive, setActive] = useState('Work')
-  // const handleActiveChange = (val) => {
-  //   return setActive(val);
-
-  // }
+  const homeText = header.datoCmsHomepage.homepageText
 
 
 
   return (
     <header>
-        <p className="nav__text">{homepageText}</p>
+        <p className="nav__text">{homeText}</p>
         <div className="nav__socials">
             <ul>
                 <li>Contact</li>

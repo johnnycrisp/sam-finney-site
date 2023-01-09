@@ -10,7 +10,7 @@ import Seo from '../components/Seo'
 
 const Index = ({data}) => {
   
-  const thumbnails = data.datoCmsHomepage.thumbnails;
+  const thumbnails = data.datoCmsHomepage.videoThumbnails
   const title = data.datoCmsHomepage.pageTitle
   console.log('Home videos', thumbnails);
   return (
@@ -18,17 +18,17 @@ const Index = ({data}) => {
     <Seo title="Home" />
     <Hero image={data.datoCmsHomepage.heroImage}/>
     <Layout 
-    homepageText={data.datoCmsHomepage.homepageText}
     title={title}
     >
       <div className="home__grid">
         {thumbnails.map((thumbnail)=> {
+          const vid = thumbnail.linkToVideo
         return (
-            <Thumbnail key={thumbnail.originalId}
-            title={thumbnail.title}
-            subtitle={thumbnail.subtitle}
-            timestamp={thumbnail.videoTimestamp}
-            image={thumbnail.thumbnailImage}
+            <Thumbnail key={vid.originalId}
+            title={vid.title}
+            subtitle={vid.subtitle}
+            timestamp={vid.videoTimestamp}
+            image={vid.thumbnailImage}
             slug={thumbnail.linkToVideo.slug}
             />
         )
@@ -45,22 +45,24 @@ export default Index
 export const query = graphql`
 query HomeQuery {
   datoCmsHomepage {
+    heroVimeoLink {
+      url
+    }
     pageTitle
-    homepageText
+    videoThumbnails {
+      linkToVideo {
+          slug
+          originalId
+          title
+          subtitle
+          videoTimestamp
+          thumbnailImage {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+      }
+    }
     heroImage {
       gatsbyImageData(placeholder: BLURRED)
-    }
-    thumbnails {
-      linkToVideo {
-        slug
-      }
-      originalId
-      videoTimestamp
-      title
-      subtitle
-      thumbnailImage {
-        gatsbyImageData(placeholder: BLURRED)
-      }
     }
   }
 }

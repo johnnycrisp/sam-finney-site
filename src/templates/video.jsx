@@ -9,12 +9,16 @@ const Video = ({data, pageContext}) => {
   const video = data.video
   const videoId = video.vimeoLink.url.slice(18)
   console.log(video)
+
   return (
     <Layout>
       <Seo title={video.title} />
       <div className="video__page-wrapper">
         <h2 className="mobile__video-title">{video.title}</h2>
-        <div className="desktop__video-details" dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
+        <div className="details__wrapper">
+          <div className="desktop__video-details" dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>
+        </div>
+        
         <div className="video__page-content">
           <VideoFrame className="video__page-video" title={video.title} url={videoId} />
           <div className="mobile__video-details" dangerouslySetInnerHTML={{__html: video.videoDetails}}></div>

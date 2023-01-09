@@ -7,7 +7,6 @@ const Layout = ({children, homepageText, title}) => {
   return (
     <div className="site__wrapper">
         <Nav 
-        homepageText={homepageText}
         title={title}
          />
         <main>{children}</main>

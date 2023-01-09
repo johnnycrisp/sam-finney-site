@@ -12,7 +12,6 @@ const archive = ({data}) => {
 
   return (
     <Layout 
-    // homepageText={data.datoCmsHomepage.homepageText}
     title={title}
     >
     <Seo title="Archive" />
@@ -20,10 +19,10 @@ const archive = ({data}) => {
       {videos.map((video)=> {
     return (
         <Thumbnail key={video.originalId}
-        title={video.thumbnail[0].title}
-        subtitle={video.thumbnail[0].subtitle}
-        timestamp={video.thumbnail[0].videoTimestamp}
-        image={video.thumbnail[0].thumbnailImage}
+        title={video.title}
+        subtitle={video.subtitle}
+        timestamp={video.videoTimestamp}
+        image={video.thumbnailImage}
         slug={video.slug}
          />
     )
@@ -40,14 +39,12 @@ query ArchiveQuery {
   videos: allDatoCmsVideo {
    nodes {
      originalId
-     thumbnail {
         videoTimestamp
         title
         subtitle
         thumbnailImage {
           gatsbyImageData(placeholder: BLURRED)
         }
-     }
    }
  }
 }`
