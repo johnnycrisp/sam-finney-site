@@ -15,9 +15,12 @@ const about = ({data}) => {
     title={about.pageTitle}
     >
     <Seo title="About" />
-    <div dangerouslySetInnerHTML={{__html: about.aboutText}}>
+    <div className="about__wrapper">
+      <div className="about__text" dangerouslySetInnerHTML={{__html: about.aboutText}}>
+      </div>
+      <GatsbyImage alt='image of sam finney, cinematographer' className="about__image" image={getImage(image)}/>
     </div>
-    <GatsbyImage alt='image of sam finney, cinematographer' className="about__image" image={getImage(image)}/>
+    
       
     </Layout>
   )
