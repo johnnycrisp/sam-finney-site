@@ -30,8 +30,8 @@ footer {
 
 
     .hero__image-wrapper {
-        padding: 56.25%;
-        width: 600px;
+        padding: 70.25%;
+        width: 1000px;
         position: relative;
         overflow: hidden;
         height: 100vh;
@@ -47,16 +47,21 @@ footer {
 
     
    
-    
-    h1 {
+
+        a {
         position: absolute;
         color: white;
-        padding-left: 3rem;
+        // padding-left: 3rem;
         font-size: 1.5rem;
         user-select: none;
         cursor: pointer;
 
+        &:hover {
+            
+        }
     }
+
+    
 
 
         .gatsby-image-wrapper {
@@ -214,6 +219,10 @@ nav {
         h2 {
             margin-bottom: .7rem;
         }
+    }
+
+    .back-link {
+        cursor: pointer;
     }
 
     //About 

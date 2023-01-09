@@ -23,9 +23,9 @@ const Nav = ({title}) => {
         <p className="nav__text">{homeText}</p>
         <div className="nav__socials">
             <ul>
-                <li>Contact</li>
-                <li>Vimeo</li>
-                <li>Instagram</li>
+                <li><a href="mailto:hello@sam-finney.com" target="_blank" rel="noreferrer">Contact</a></li>
+                <li><a href="https://vimeo.com/samfinney" target="_blank" rel="noreferrer">Vimeo</a></li>
+                <li><a href="https://www.instagram.com/srafinney/" target="_blank" rel="noreferrer">Instagram</a></li>
             </ul>
         </div>
         <DropdownNav 

@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, navigate } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Layout from '../components/Layout';
@@ -28,7 +28,7 @@ const Video = ({data, pageContext}) => {
               <GatsbyImage  key={still.originalId} alt={`Still from ${video.title}`} className="thumbnail" image={getImage(still)}/>
             )
           })}
-          <Link className="back-link" to="/">&larr; Back</Link>
+          <div onClick={()=> navigate(-1)} className="back-link">&larr; Back</div>
         </div>
         </div>
         

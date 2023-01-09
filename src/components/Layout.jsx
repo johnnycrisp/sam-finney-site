@@ -5,7 +5,7 @@ import Nav from './Nav'
 
 const Layout = ({children, homepageText, title}) => {
   return (
-    <div className="site__wrapper">
+    <div className="site__wrapper" id="main">
         <Nav 
         title={title}
          />
