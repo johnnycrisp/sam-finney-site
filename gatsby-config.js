@@ -25,5 +25,12 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
-  }]
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `sam-finney`,
+      icon: `src/images/finney-icon.avif`, // This path is relative to the root of the site.
+    },
+  },]
 };

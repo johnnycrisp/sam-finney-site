@@ -87,49 +87,20 @@
      }
 
      
-.hero__wrapper {
+// .hero__wrapper {
 
   
 
-        a {
-        align-self: flex-start;
-        padding-left: 3rem;
-    }
+//         a {
+//         align-self: flex-start;
+//         padding-left: 3rem;
+//     }
     
     
-
-    .hero__image-wrapper {
-        padding: 56.25%;
-        width: 1000px;
-        position: relative;
-        overflow: hidden;
-        height: 0;
-        
-        iframe {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        }
-    }
-}
-
-// other version 
-
-
-// .hero__wrapper {
-//     height: 100vh;
-//     overflow: hidden;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     // align-items: center;
-//     justify-content: center;
-
 
 //     .hero__image-wrapper {
 //         padding: 56.25%;
+//         width: 1000px;
 //         position: relative;
 //         overflow: hidden;
 //         height: 0;
@@ -140,10 +111,61 @@
 //         position: absolute;
 //         top: 0;
 //         left: 0;
-    
+//         }
 //     }
+// }
+
+// other version 
+
+.mobile__hero {
+    display: none;
+}
+
+
+
+.hero__wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    a {
+                position: absolute;
+                color: white;
+                // padding-top: 20%;
+                padding-left: 5%;
+                font-size: 2.5rem;
+                user-select: none;
+                cursor: pointer;
+                justify-self: baseline;
+                align-self: flex-start;
         
-//     }
+                &:hover {
+                    
+                }
+            }
+
+
+    .hero__image-wrapper {
+        padding: 56.25%;
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        
+        iframe {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+    }
+        
+    }
 
 .about__wrapper {
     max-width: 50%;
@@ -151,3 +173,4 @@
 
 }
 
+}
