@@ -45,9 +45,6 @@ export default Index
 export const query = graphql`
 query HomeQuery {
   datoCmsHomepage {
-    heroVimeoLink {
-      url
-    }
     pageTitle
     videoThumbnails {
       linkToVideo {
