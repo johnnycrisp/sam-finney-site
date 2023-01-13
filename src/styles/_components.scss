@@ -216,6 +216,14 @@ nav {
         font-weight: bold;
         padding-top: .3rem;
     }
+
+    .thumbnail__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+
+    }
 }
 
 // Home grid
