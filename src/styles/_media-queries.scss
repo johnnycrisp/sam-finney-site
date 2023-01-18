@@ -176,3 +176,19 @@
 }
 
 }
+
+
+@media screen and (min-width: 1645px) {
+
+    .home__grid {
+        grid-template-columns: repeat(6, 1fr);
+        
+            .thumbnail__wrapper {
+            grid-column: span 2;
+        
+        }
+
+    }
+
+
+}
