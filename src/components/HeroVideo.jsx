@@ -9,7 +9,10 @@ const HeroVideo = ({ url, title }) => (
       allow="autoplay; fullscreen; picture-in-picture;"
       allowfullscreen
       badge="0"
+      // height="400"
+      // width="800"
       autopause="0"
+      play="1"
       player_id="0"
       app_id="58479"
       background="1"

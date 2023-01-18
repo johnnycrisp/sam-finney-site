@@ -20,10 +20,10 @@ console.log('a', heroVid);
 
   return (
     <>
-    <div className="mobile__hero">
+    {/* <div className="mobile__hero">
       <GatsbyImage className="hero-image" image={getImage(image)} />
       <a href="#main">&darr;</a>
-    </div>
+    </div> */}
     <div className="hero__wrapper">
         <div className="hero__image-wrapper">
         <iframe src={`https://player.vimeo.com/video/${videoId}&background=1&autoplay=1&title=0&byline=0&portrait=0`} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>

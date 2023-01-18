@@ -20,6 +20,7 @@ footer {
 
 
 .hero__wrapper {
+    background-color: black;
     height: 100vh;
     overflow: hidden;
     width: 100%;
@@ -83,9 +84,9 @@ footer {
         justify-self: baseline;
         align-self: flex-start;
 
-        &:hover {
+        // &:hover {
             
-        }
+        // }
     }
 }
      
@@ -209,7 +210,9 @@ nav {
 
 //Thumbnail 
 
+
 .thumbnail__wrapper {
+
     p {
         padding-bottom: .3rem;
     }
@@ -320,7 +323,7 @@ nav {
             }
         }
 
-        // .gatsby-image-wrapper {
-        //     min-height: 350px;
-        // }
+        .gatsby-image-wrapper {
+            min-height: 350px;
+        }
     }
