@@ -38,6 +38,7 @@ export const query = graphql`
 query ArchiveQuery {
   videos: allDatoCmsVideo {
    nodes {
+    slug
      originalId
         videoTimestamp
         title
