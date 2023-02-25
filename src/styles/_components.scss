@@ -142,6 +142,12 @@ nav {
 //Thumbnail
 
 .thumbnail__wrapper {
+  display: grid;
+  grid-template-rows: 30px 1fr 30px;
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
   p {
     padding-bottom: 0.3rem;
   }
