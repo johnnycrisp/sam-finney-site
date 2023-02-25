@@ -35,6 +35,10 @@
     display: flex;
     flex-direction: row-reverse;
 
+    .video__page-content {
+      width: 100%;
+    }
+
     .video__stills {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -53,7 +57,7 @@
     .vimeo__embed {
       position: relative;
       padding-bottom: 56.25%; /* 16:9 */
-      height: 0;
+      height: 100%;
 
       iframe {
         position: absolute;

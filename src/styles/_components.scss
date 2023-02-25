@@ -177,7 +177,7 @@ nav {
 .vimeo__embed {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+  height: 100%;
 
   iframe {
     position: absolute;
@@ -194,6 +194,11 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  .back-link {
+    cursor: pointer;
+    padding-top: 1rem;
+  }
 
   h2 {
     font-weight: bold;
@@ -232,10 +237,6 @@ nav {
   h2 {
     margin-bottom: 0.7rem;
   }
-}
-
-.back-link {
-  cursor: pointer;
 }
 
 //About
