@@ -18,15 +18,14 @@ const Hero = ({ image }) => {
   `);
 
   const arrowRef = useRef();
-  const tl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.5 });
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      tl.to(".arrow", { y: "5" });
-      tl.to(".arrow", { y: "-20" });
-      tl.to(".arrow", { y: "5" });
-      tl.to(".arrow", { y: "-20" });
-      tl.to(".arrow", { rotate: "360" });
+      tl.to(".arrow", { y: "5", duration: 0.4 });
+      tl.to(".arrow", { y: "-15", duration: 0.4 });
+      tl.to(".arrow", { y: "5", duration: 0.4 });
+      tl.to(".arrow", { y: "-15", duration: 0.4 });
     }, arrowRef);
     return () => ctx.revert();
   }, []);
