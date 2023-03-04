@@ -23,7 +23,7 @@
 
   .archive__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
   }
 
@@ -44,14 +44,18 @@
       grid-template-columns: 1fr 1fr;
       width: 100%;
 
-      .thumbnail {
-        grid-column: span 2;
+      // .thumbnail {
+      //   grid-column: span 2;
 
-        &:nth-child(2n),
-        &:nth-child(3n) {
-          grid-column: span 1;
-        }
-      }
+      //   &:nth-child(2n),
+      //   &:nth-child(3n) {
+      //     grid-column: span 1;
+      //   }
+      // }
+    }
+
+    .details__wrapper {
+      order: 1;
     }
 
     .vimeo__embed {
@@ -142,6 +146,10 @@
       cursor: pointer;
       justify-self: baseline;
       align-self: flex-start;
+
+      img {
+        height: 2.5rem;
+      }
     }
 
     .hero__image-wrapper {

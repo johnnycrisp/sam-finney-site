@@ -28,10 +28,10 @@ const Video = ({ data, pageContext }) => {
             title={video.title}
             url={videoId}
           />
-          <div
+          {/* <div
             className="mobile__video-details"
             dangerouslySetInnerHTML={{ __html: video.videoDetails }}
-          ></div>
+          ></div> */}
           <div className="video__stills">
             {video.videoStills.map((still) => {
               return (
@@ -44,10 +44,10 @@ const Video = ({ data, pageContext }) => {
               );
             })}
           </div>
-          <div onClick={() => navigate(-1)} className="back-link">
-            &larr; Back
-          </div>
         </div>
+      </div>
+      <div onClick={() => navigate(-1)} className="back-link">
+        &larr; Back
       </div>
     </Layout>
   );
