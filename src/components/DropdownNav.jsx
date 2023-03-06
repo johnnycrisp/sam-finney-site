@@ -1,33 +1,33 @@
-import { Link, useStaticQuery } from 'gatsby';
-import React, {useState} from 'react'
+import { Link, useStaticQuery } from "gatsby";
+import React, { useState } from "react";
 
-function DropdownNav({title}) {
+function DropdownNav({ title }) {
+  const [isOpen, setOpen] = useState(false);
+  const [isActive, setActive] = useState("Work");
 
-
- const [isOpen, setOpen] = useState(false)
- const [isActive, setActive] = useState('Work')
-
- const handleChange = () => {
-    if(isOpen === false){
-        setOpen(true);
+  const handleChange = () => {
+    if (isOpen === false) {
+      setOpen(true);
     } else {
-        setOpen(false);
+      setOpen(false);
     }
-  }
+  };
 
   return (
     <nav>
-        <button onClick={handleChange} className="nav__toggle">
-            <span>{title ? title : 'Work'}</span><span>+</span>
-        </button>
-        <div className={isOpen ? "menu__open" : "nav__menu"}>
-            <Link to="/">Home</Link>
-            <Link onClick={()=> setActive('Commercial')} to="/commercial">Commercial</Link>
-            <Link to="/documentary">Documentary</Link>
-            <Link to="/music-video">Music Video</Link>
-            <Link to="/archive">Archive</Link>
-            <Link to="/about">About</Link>
-        </div>
+      <button onClick={handleChange} className="nav__toggle">
+        <span>{title ? title : "Work"}</span>
+        <span>+</span>
+      </button>
+      <div className={isOpen ? "menu__open" : "nav__menu"}>
+        <Link to="/">Home</Link>
+        <Link onClick={() => setActive("Commercial")} to="/commercial">
+          Commercial & Promo
+        </Link>
+        <Link to="/documentary">Narrative & Documentary</Link>
+        <Link to="/archive">Archive</Link>
+        <Link to="/about">About & Content</Link>
+      </div>
     </nav>
   );
 }

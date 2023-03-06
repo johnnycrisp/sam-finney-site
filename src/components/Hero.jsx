@@ -24,8 +24,8 @@ const Hero = ({ image }) => {
     const ctx = gsap.context(() => {
       tl.to(".arrow", { y: "5", duration: 0.4 });
       tl.to(".arrow", { y: "-15", duration: 0.4 });
-      tl.to(".arrow", { y: "5", duration: 0.4 });
-      tl.to(".arrow", { y: "-15", duration: 0.4 });
+      tl.to(".arrow", { y: "0", duration: 0.4 });
+      tl.to(".arrow", { y: "-10", duration: 0.4 });
     }, arrowRef);
     return () => ctx.revert();
   }, []);

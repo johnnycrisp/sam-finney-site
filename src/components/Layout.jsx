@@ -1,19 +1,18 @@
-import React from 'react'
-import '../styles/main.scss'
-import Footer from './Footer'
-import Nav from './Nav'
+import React from "react";
+import "../styles/main.scss";
+import Footer from "./Footer";
+import Nav from "./Nav";
 
-const Layout = ({children, homepageText, title}) => {
+const Layout = ({ children, homepageText, title }) => {
   return (
-    <div className="site__wrapper" id="main">
-        <Nav 
-        title={title}
-         />
+    <>
+      <div className="site__wrapper" id="main">
+        <Nav title={title} />
         <main>{children}</main>
-        <Footer />
-    </div>
-    
-  )
-}
+      </div>{" "}
+      <Footer />
+    </>
+  );
+};
 
-export default Layout
+export default Layout;
